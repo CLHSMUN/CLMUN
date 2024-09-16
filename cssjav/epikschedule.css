@@ -341,16 +341,15 @@ p{
         font-size: 50px;
     }
     .date h2{
-        font-size: 30
-        5px;
+        font-size: 30px;
 
     }
     .left{
-        font-size:15px ;
+        font-size:13px ;
         text-align: right;
     }
     .right{
-        font-size:15px ;
+        font-size:13px ;
         text-align: left;
     }
     p{

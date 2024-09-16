@@ -311,10 +311,10 @@ p{
 
     }
     .left{
-        font-size:18px ;
+        font-size:15px ;
     }
     .right{
-        font-size:18px ;
+        font-size:15px ;
     }
     p{
         padding: 10px 10px;
@@ -345,11 +345,11 @@ p{
 
     }
     .left{
-        font-size:13px ;
+        font-size:15px ;
         text-align: right;
     }
     .right{
-        font-size:13px ;
+        font-size:15px ;
         text-align: left;
     }
     p{

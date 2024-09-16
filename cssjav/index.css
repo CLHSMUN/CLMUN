@@ -84,9 +84,9 @@ header{
     }
     .headertext{
       font-size: 30px;
-      top: 34%;
+      top: 36%;
       left: 50%;
-      transform: translate(-50%, -66%);
+      transform: translate(-50%, -64%);
     }
     .date{
         font-size: 40px ;

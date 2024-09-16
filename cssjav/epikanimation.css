@@ -10,24 +10,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 150%;
     background-image: url(councilimg/slava-auchynnikau-g9IIj_5gQ_8-unsplash\ \(1\).jpg); 
+    background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255,255,255,0.2);
     background-blend-mode: darken;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
 header{
-    position: relative;
     height: 100vh;
 }
-.councils{
+.secretariats{
     position: absolute;
     margin: 0;
     display: flex;
@@ -51,9 +63,9 @@ header{
 @media screen and (max-width: 768px) {
     .headertext{
       font-size: 30px;
-      top: 50%;
+      top: 30%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -70%);
     }
     header{
       height: 50vh;
@@ -63,9 +75,9 @@ header{
 /* For medium devices */
 @media screen and (min-width: 768px) {
   .headertext{
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     font-size: 50px;
   }
   header{
@@ -87,21 +99,23 @@ header{
   }
 }
 section{
-    position: relative;
-    height: 100%;
-}
-.epikiaea{
     width: 100%;
     height: auto;
-    position: relative;
-    color: #b8e7ff;
     backdrop-filter: blur(20px);
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.8)
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.7)
     );
+    color: #b8e7ff;
+    text-align: center;
 }
 
+.epikiaea{
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    
+}
 .epikiaea .iaea .img{
     position: relative;
     display: block;
@@ -117,16 +131,9 @@ section{
     animation-timeline: view();
     animation-range: entry cover 40%;
     opacity: 0;
+
 }
-@keyframes slidein1 {
-    from{
-        left: -100%;
-        opacity: 0;
-    }to{
-        left: 50px;
-        opacity: 1;
-    }
-}
+
 .epikiaea .iaea .h1{
     display: block;
     position: absolute;
@@ -136,7 +143,7 @@ section{
     font-size: 90px;
     font-family: "Roboto Condensed", sans-serif;
     animation-name: dissapear;
-    animation-duration: 1s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:1;
     animation-direction: normal;
@@ -144,61 +151,24 @@ section{
     animation-timeline: view();
     animation-range: entry cover 40%;
     opacity: 0;
-}
-@keyframes slidein {
-    from{
-        left: -50%;
-        opacity: 0;
-    }to{
-        left: 300px;
-        opacity: 1;
-    }
-}
 
+}
 .infoiaea{
     position: relative;
+    margin-top: 50px;
     width: 100%;
 }
 .infoiaea img {
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
 }
 
 .infoiaea .dixy{
+
     display: block;
     position: relative;
     left: 70%;
-    margin-top: -5%;
     overflow: hidden;
-    animation-name: dissapear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry cover 60%;
-}
-@keyframes slidein4 {
-    from{
-        left: 150%;
-    }to{
-        left: 70%;
-    }
-}
-
-
-.infoiaea .quote{
-    display: block;
-    position: absolute;
-    width: 61%;
-    top: 20%;
-    left: 30px;
-    font-size: 30px;
-    text-align: right;
-    font-family: "Kanit", sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 1px;
     animation-name: dissapear;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
@@ -209,14 +179,42 @@ section{
     animation-range: entry cover 40%;
     opacity: 0;
 }
-@keyframes slidein3 {
+
+@keyframes dissapear {
     from{
         opacity: 0;
-        left: -50%;
     }to{
         opacity: 1;
-        left: 30px;
+    }
+}
 
+
+.infoiaea .quote{
+
+    display: block;
+    position: absolute;
+    width: 61%;
+    top: 10%;
+    left: 50px;
+    font-size: 35px;
+    text-align: right;
+    font-family: "Kanit", sans-serif;
+    animation-name: dissapear;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    opacity: 0;
+}
+
+@keyframes dissapear {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
     }
 }
 
@@ -224,11 +222,12 @@ section{
     position: relative;
     display: block;
     width: 65%;
-    height: 100%;
+    height:auto;
+    bottom: 190px;
     left: 30px;
-    bottom: 150px;
-    font-size: 25px;
+    font-size: 30px;
     font-family: "Work Sans", sans-serif;
+    text-align: center;
     animation-name: dissapear;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
@@ -248,6 +247,9 @@ section{
     }
 }
 @media screen and (max-width: 550px) {
+    .epikiaea{
+        height: 100%;
+    }
     .epikiaea .iaea img{
         height: 125px;
         width: 125px;
@@ -280,18 +282,16 @@ section{
         display: block;
         position: relative;
         left:50%;
-        top: -20px;
-        transform: translate(-50%,20%);
+        bottom: 20px;
+        transform: translate(-50%,0);
         overflow: hidden;
     }
     .infoiaea .quote{
         display: block;
-        position: absolute;
+        position: relative;
         width: 80%;
-        margin-top: 10px;
-        top: 67%;
         left: 30px;
-        font-size: 25px;
+        font-size: 20px;
         text-align: right;
         font-family: "Kanit", sans-serif;
         letter-spacing: 1px;
@@ -301,13 +301,14 @@ section{
         position: relative;
         display: block;
         width: 80%;
+        margin-top: 200px;
         height: 100%;
         left: 30px;
-        top: 410px;
-        font-size:20px;
+        font-size:18px;
+        text-align: left;
     }
   }
-@media screen and (min-width: 550px) {
+  @media screen and (min-width: 550px) {
     .epikiaea .iaea img{
         height: 125px;
         width: 125px;
@@ -319,11 +320,6 @@ section{
         top: 30px;
         left: 30px;
     }
-    .infoiaea{
-        height: 100%;
-        position: relative;
-        width: 100%;
-    }
     .epikiaea .iaea .h1{
         display: block;
         position: absolute;
@@ -332,25 +328,29 @@ section{
         color: #88d2f8f9;
         font-size: 60px;
     }
+    .infoiaea{
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
     .infoiaea img {
-        width: 300px;
-        height: 350px;
+        width: 350px;
+        height: 400px;
     }
     .infoiaea .dixy{
         display: block;
         position: relative;
         left:50%;
-        top: -20px;
-        transform: translate(-50%,20%);
+        bottom: 20px;
+        transform: translate(-50%,0);
         overflow: hidden;
     }
     .infoiaea .quote{
         display: block;
-        position: absolute;
+        position: relative;
         width: 80%;
-        margin-top: 10px;
-        top: 400px;
-        left: 30px;
+        left: 50%;
+        transform: translate(-50%,0);
         font-size: 25px;
         text-align: right;
         font-family: "Kanit", sans-serif;
@@ -361,16 +361,21 @@ section{
         position: relative;
         display: block;
         width: 80%;
+        margin-top: 242px;
         height: 100%;
-        left: 30px;
-        top: 250px;
-        font-size:20px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size:21px;
+        text-align: left;
     }
   }
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: 1050px) {
+    .epikiaea{
+        height: 650px;
+    }
     .epikiaea .iaea img{
-        height: 225px;
-        width: 225px;
+        height: 175px;
+        width: 175px;
     }
     .epikiaea .iaea .img{
         position: relative;
@@ -378,157 +383,72 @@ section{
         border-radius: 50%;
         top: 30px;
         left: 50px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+    
     }
-    @keyframes slidein1 {
-        from{
-            left: -100%;
-            opacity: 0;
-        }to{
-            left: 50px;
-            opacity: 1;
-        }
-    }
+
+    
     .epikiaea .iaea .h1{
         display: block;
         position: absolute;
-        left: 300px;
+        left: 250px;
         top: 85px;
         color: #88d2f8f9;
-        font-size: 90px;
+        font-size: 70px;
         font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slidein {
-        from{
-            left: -50%;
-            opacity: 0;
-        }to{
-            left: 300px;
-            opacity: 1;
-        }
-    }
     
+    }
     .infoiaea{
-        height: 100%;
         position: relative;
         width: 100%;
     }
     .infoiaea img {
-        width: 400px;
-        height: 500px;
+        width: 350px;
+        height: 400px;
     }
     
     .infoiaea .dixy{
+    
         display: block;
         position: relative;
-        left: 70%;
-        margin-top: 0;
+        left: 80%;
+        transform: translate(-50%,0);
         overflow: hidden;
+    }
+    
+    
+    .infoiaea .quote{
+    
+        display: block;
+        position: absolute;
+        width: 61%;
+        left: 10px;
+        top: 20px;
         transform: translate(0,0);
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 60%;
-    }
-    @keyframes slidein4 {
-        from{
-            left: 150%;
-        }to{
-            left: 70%;
-        }
-    }
-    
-    
-    .infoiaea .quote{
-        display: block;
-        position: absolute;
-        width: 61%;
-        margin-top: 0px;
-        left: 30px;
-        top: 80px;
-        left: 30px;
-        font-size: 30px;
+        font-size: 25px;
         text-align: right;
         font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-    }
-    @keyframes slidein3 {
-        from{
-            opacity: 0;
-            left: -50%;
-        }to{
-            opacity: 1;
-            left: 30px;
-    
-        }
     }
     
     .infoiaea .infoiaean{
-        top: auto;
         position: relative;
         display: block;
-        width: 65%;
-        height: 100%;
-        left: 30px;
-        bottom: 150px;
-        font-size: 25px;
+        width: 60%;
+        height:auto;
+        left: 20px;
+        bottom: 420px;
+        transform: translate(0,0);
+        font-size: 20px;
         font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
+        text-align: left;
     }
   }
-  
-  /* For medium devices */
-  
-  @media screen and (min-width: 1300px){
+  @media screen and (min-width: 1250px) {
+    .epikiaea{
+        height: 700px;
+    }
     .epikiaea .iaea img{
-        height: 225px;
-        width: 225px;
+        height: 175px;
+        width: 175px;
     }
     .epikiaea .iaea .img{
         position: relative;
@@ -536,25 +456,82 @@ section{
         border-radius: 50%;
         top: 30px;
         left: 50px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+    
     }
-    @keyframes slidein1 {
-        from{
-            left: -100%;
-            opacity: 0;
-        }to{
-            left: 50px;
-            opacity: 1;
-        }
+
+    
+    .epikiaea .iaea .h1{
+        display: block;
+        position: absolute;
+        left: 250px;
+        top: 85px;
+        color: #88d2f8f9;
+        font-size: 70px;
+        font-family: "Roboto Condensed", sans-serif;
+    
     }
+    .infoiaea{
+        position: relative;
+        width: 100%;
+    }
+    .infoiaea img {
+        width: 400px;
+        height: 450px;
+    }
+    
+    .infoiaea .dixy{
+    
+        display: block;
+        position: relative;
+        left: 80%;
+        transform: translate(-50%,0);
+        overflow: hidden;
+    }
+    
+    
+    .infoiaea .quote{
+    
+        display: block;
+        position: absolute;
+        width: 61%;
+        left: 10px;
+        top: 20px;
+        transform: translate(0,0);
+        font-size: 28px;
+        text-align: right;
+        font-family: "Kanit", sans-serif;
+    }
+    
+    .infoiaea .infoiaean{
+        position: relative;
+        display: block;
+        width: 60%;
+        height:auto;
+        left: 30px;
+        bottom: 430px;
+        transform: translate(0,0);
+        font-size: 23px;
+        font-family: "Work Sans", sans-serif;
+        text-align: left;
+    }
+  }
+  @media screen and (min-width: 1500px){
+    .epikiaea{
+        height: 850px;
+    }
+    .epikiaea .iaea img{
+        height: 200px;
+        width: 200px;
+    }
+    .epikiaea .iaea .img{
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        top: 30px;
+        left: 50px;
+    
+    }
+    
     .epikiaea .iaea .h1{
         display: block;
         position: absolute;
@@ -563,132 +540,72 @@ section{
         color: #88d2f8f9;
         font-size: 90px;
         font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slidein {
-        from{
-            left: -50%;
-            opacity: 0;
-        }to{
-            left: 300px;
-            opacity: 1;
-        }
-    }
     
+    }
     .infoiaea{
         position: relative;
+        margin-top: 50px;
         width: 100%;
     }
     .infoiaea img {
-        width: 400px;
+        width: 450px;
         height: 500px;
     }
     
     .infoiaea .dixy{
+    
         display: block;
         position: relative;
         left: 70%;
-        margin-top: -5%;
+        transform: translate(0%,0);
         overflow: hidden;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 60%;
-    }
-    @keyframes slidein4 {
-        from{
-            left: 150%;
-        }to{
-            left: 70%;
-        }
     }
     
     
     .infoiaea .quote{
+    
         display: block;
         position: absolute;
         width: 61%;
-        top: 20%;
-        left: 30px;
-        bottom: 150px;
+        top: 5%;
+        left: 50px;
         font-size: 30px;
         text-align: right;
         font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-    }
-    @keyframes slidein3 {
-        from{
-            opacity: 0;
-            left: -50%;
-        }to{
-            opacity: 1;
-            left: 30px;
-    
-        }
     }
     
     .infoiaea .infoiaean{
         position: relative;
         display: block;
-        width: 65%;
-        height: 100%;
+        width: 60%;
+        height:auto;
         left: 30px;
-        bottom: 150px;
+        bottom: 450px;
         font-size: 25px;
         font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+        text-align: left;
     }
+
+}
+
+.epikasean{
+    position: relative;
+    height: 100%;
+    width: 100%;
     
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
-    }
-  }
-.epikiaea .asean img{
+}
+.epikasean img {
     width: 225px;
     height: 225px;
 }
-
-.epikiaea .asean .img{
+.epikasean .asean .img{
     position: relative;
     display: block;
     border-radius: 50%;
-    margin-top: -5%;
-    left: 83%;
+    top: 30px;
+    left: 80%;
     animation-name: dissapear;
-    animation-duration: 1s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:1;
     animation-direction: normal;
@@ -696,86 +613,43 @@ section{
     animation-timeline: view();
     animation-range: entry cover 40%;
     opacity: 0;
-}
-@keyframes slideinright {
-    from{
-        opacity: 0;
-        left: 150%;
-    }to{
-        opacity: 1;
-        left: 83%;
-    }
-}
-.epikiaea .asean .h1{
-    display: block;
-    position: relative;
-    top: 100px;
-    color: #88d2f8f9;
-    font-size: 90px;
-    left: 63%;
-    font-family: "Roboto Condensed", sans-serif;
-    animation-name: dissapear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry cover 40%;
-    opacity: 0;
-}
-@keyframes slideinright1 {
-    from{
-        opacity: 0;
-        left: 150%;
-    }to{
-        opacity: 1;
-        left: 63%;
-    }
+
 }
 
+.epikasean .asean .h1{
+    display: block;
+    position: absolute;
+    left: 60%;
+    top: 85px;
+    color: #88d2f8f9;
+    font-size: 90px;
+    font-family: "Roboto Condensed", sans-serif;
+    animation-name: dissapear;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    opacity: 0;
+
+}
 .infoasean{
     position: relative;
     width: 100%;
 }
 .infoasean img {
     width: 500px;
-    height: 500px;
+    height: 600px;
 }
+
 .infoasean .prabowo{
+
     display: block;
     position: relative;
-    top: 20% ;
     left: 30px;
     overflow: hidden;
-    animation-name: dissapear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry cover 70%;
-}
-@keyframes slideinright4 {
-    from{
-        left: -100%;
-    }to{
-        left: 30px;
-    }
-}
-
-
-.infoasean .quote2{
-    display: block;
-    position: absolute;
-    width: 58%;
-    top: 10%;
-    left: 40%;
-    font-size: 30px;
-    font-family: "Kanit", sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 1px;
     animation-name: dissapear;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
@@ -784,70 +658,84 @@ section{
     animation-fill-mode: forwards;
     animation-timeline: view();
     animation-range: entry cover 40%;
-}
-@keyframes slideinright3 {
-    from{
-        left: 150%;
-    }to{
-        left: 40%;
-    }
+    opacity: 0;
 }
 
 
-.infoasean .infoaseann{
-    position: relative;
+
+.infoasean .quote2{
+
     display: block;
-    width: 60%;
-    height: 100%;
-    left: 40%;
-    bottom: 150px;
-    font-size: 25px;
-    font-family: "Work Sans", sans-serif;
+    position: absolute;
+    width: 61%;
+    top: 10%;
+    left: 38%;
+    font-size: 35px;
+    text-align: left;
+    font-family: "Kanit", sans-serif;
     animation-name: dissapear;
-    animation-duration: 12s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:1;
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-timeline: view();
-    animation-range: entry cover 50%;
+    animation-range: entry cover 40%;
+    opacity: 0;
 }
 
-@keyframes dissapear {
-    from{
-        opacity: 0;
-    }to{
-        opacity: 1;
-    }
+.infoasean .infoaseann{
+    position: relative;
+    display: block;
+    width: 60%;
+    height:auto;
+    left: 35%;
+    bottom: 200px;
+    font-size: 25px;
+    font-family: "Work Sans", sans-serif;
+    text-align: right;
+    animation-name: dissapear;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    opacity: 0;
 }
 
-@media screen and (max-width: 550px) {
-    .asean{
+@media screen and (max-width: 450px) {
+    .epikasean{
         position: relative;
-        top: 380px;
+        bottom: 100px;
     }
-    .epikiaea .asean img{
+
+    .epikasean .asean img{
         height: 125px;
         width: 125px;
     }
-    .epikiaea .asean .img{
+    .epikasean .asean .img{
         position: relative;
         display: block;
         border-radius: 50%;
-        left: 65%;
+        top: 30px;
+        left: 70%;
+        transform:translate(-30%,0);
     }
-    .epikiaea .asean .h1{
+    .epikasean .asean .h1{
         display: block;
-        position: relative;
-        left: 20%;
-        top: 95px;
+        position: absolute;
+        left: 40%;
+        transform:translate(-60%,0);
+        top: 55px;
         color: #88d2f8f9;
         font-size: 60px;
     }
-
     .infoasean{
+        height: 100%;
         position: relative;
-        top: 280px;
+        width: 100%;
     }
     .infoasean img {
         width: 300px;
@@ -857,17 +745,148 @@ section{
         display: block;
         position: relative;
         left:50%;
-        top: 0;
-        transform: translate(-50%,20%);
+        bottom: 20px;
+        transform: translate(-50%,0);
         overflow: hidden;
     }
     .infoasean .quote2{
         display: block;
-        position: absolute;
+        position: relative;
         width: 80%;
-        margin-top: 10px;
-        top: 420px;
+        left: 50px;
+        font-size: 20px;
+        text-align: left;
+        font-family: "Kanit", sans-serif;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+    .infoasean .infoaseann{
+        position: relative;
+        display: block;
+        width: 80%;
+        margin-top: 210px;
+        height: 100%;
         left: 30px;
+        font-size:18px;
+        text-align: right;
+    }
+  }
+  @media screen and (min-width: 450px){
+    .epikasean{
+        position: relative;
+        bottom: 100px;
+    }
+
+    .epikasean .asean img{
+        height: 125px;
+        width: 125px;
+    }
+    .epikasean .asean .img{
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        top: 30px;
+        left: 75%;
+        transform:translate(-25%,0);
+    }
+    .epikasean .asean .h1{
+        display: block;
+        position: absolute;
+        left: 48%;
+        transform:translate(-52%,0);
+        top: 55px;
+        color: #88d2f8f9;
+        font-size: 60px;
+    }
+    .infoasean{
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+    .infoasean img {
+        width: 300px;
+        height: 350px;
+    }
+    .infoasean .prabowo{
+        display: block;
+        position: relative;
+        left:50%;
+        bottom: 20px;
+        transform: translate(-50%,0);
+        overflow: hidden;
+    }
+    .infoasean .quote2{
+        display: block;
+        position: relative;
+        width: 80%;
+        left: 50px;
+        font-size: 20px;
+        text-align: left;
+        font-family: "Kanit", sans-serif;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+    .infoasean .infoaseann{
+        position: relative;
+        display: block;
+        width: 80%;
+        margin-top: 210px;
+        height: 100%;
+        left: 30px;
+        font-size:18px;
+        text-align: right;
+    }
+
+  }
+  @media screen and (min-width: 550px) {
+    .epikasean{
+        width: 100%;
+        height: 100%;
+    }
+    .epikasean .asean img{
+        height: 125px;
+        width: 125px;
+    }
+    .epikasean .asean .img{
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        top: 30px;
+        left: 80%;
+        transform:translate(-20%,0);
+    }
+    .epikasean .asean .h1{
+        display: block;
+        position: absolute;
+        left: 55%;
+        transform:translate(-45%,0);
+        top: 55px;
+        color: #88d2f8f9;
+        font-size: 60px;
+    }
+    .infoasean{
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+    .infoasean img {
+        width: 350px;
+        height: 400px;
+    }
+    .infoasean .prabowo{
+        display: block;
+        position: relative;
+        left:50%;
+        bottom: 20px;
+        transform: translate(-50%,0);
+        overflow: hidden;
+    }
+    .infoasean .quote2{
+        display: block;
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%,0);
         font-size: 25px;
         text-align: right;
         font-family: "Kanit", sans-serif;
@@ -878,293 +897,237 @@ section{
         position: relative;
         display: block;
         width: 80%;
+        margin-top: 242px;
         height: 100%;
-        left: 30px;
-        top: 455px;
-        font-size:20px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size:21px;
+        text-align: left;
     }
   }
-@media screen and (min-width: 550px) {
-    .asean{
+  @media screen and (min-width: 650px){
+    .epikasean .asean .img{
+        left: 80%;
+        transform:translate(-20%,0);
+    }
+    .epikasean .asean .h1{
+        left: 60%;
+        transform:translate(-40%,0);
+    }
+  }
+  @media screen and (min-width: 750px){
+    .epikasean .asean .img{
+        left: 83%;
+        transform:translate(-17%,0);
+    }
+    .epikasean .asean .h1{
+        left: 63%;
+        transform:translate(-37%,0);
+    }
+  }
+
+  @media screen and (min-width: 850px){
+    .epikasean .asean .img{
+        left: 83%;
+        transform:translate(-17%,0);
+    }
+    .epikasean .asean .h1{
+        left: 65%;
+        transform:translate(-35%,0);
+    }
+  }
+
+  @media screen and (min-width: 950px){
+    .epikasean .asean .img{
+        left: 85%;
+        transform:translate(-15%,0);
+    }
+    .epikasean .asean .h1{
+        left: 70%;
+        transform:translate(-30%,0);
+    }
+  }
+  @media screen and (min-width: 1050px){
+    .epikasean{
         position: relative;
-        top: 260px;
+        height: 750px;
+        width: 100%;
+        bottom: 0px;        
     }
-    .epikiaea .asean img{
-        height: 125px;
-        width: 125px;
+    .epikasean .asean img{
+        height: 175px;
+        width: 175px;
     }
-    .epikiaea .asean .img{
+    .epikasean .asean .img{
         position: relative;
         display: block;
         border-radius: 50%;
-        left: 70%;
+        top: 30px;
+        left: 80%;
+        transform: translate(0);
+    
     }
-    .epikiaea .asean .h1{
+    
+    .epikasean .asean .h1{
         display: block;
-        position: relative;
+        position: absolute;
+        left: 65%;
         top: 85px;
         color: #88d2f8f9;
         font-size: 60px;
-        left: 48%;
+        font-family: "Roboto Condensed", sans-serif;
+        transform: translate(0);
+    
     }
-
     .infoasean{
         position: relative;
-        top: 220px;
+        width: 100%;
     }
     .infoasean img {
-        width: 300px;
-        height: 350px;
+        width: 350px;
+        height: 400px;
+        
     }
+    
     .infoasean .prabowo{
+        top: 40px;
         display: block;
         position: relative;
-        left:50%;
-        top: -20px;
-        transform: translate(-50%,20%);
-        overflow: hidden;
+        left: 30px;
+        transform: translate(0);
+
     }
+    
+    
+    
     .infoasean .quote2{
+        transform: translate(0);
         display: block;
         position: absolute;
-        width: 80%;
-        margin-top: 10px;
-        top: 400px;
-        left: 30px;
+        width: 61%;
+        top: 10%;
+        left: 38%;
         font-size: 25px;
-        text-align: right;
-        font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
     }
+    
     .infoasean .infoaseann{
         position: relative;
         display: block;
-        width: 90%;
-        height: 100%;
-        left: 30px;
-        top: 310px;
-        font-size:20px;
+        width: 58%;
+        height:auto;
+        left: 40%;
+        bottom: 350px;
+        font-size: 20px;
+        transform: translate(0);
     }
   }
-  @media screen and (min-width: 950px) {
-    .asean{
-        position: inherit;
-        top: 0;
+
+  @media screen and (min-width: 1250px){
+    .epikasean{
+        position: relative;
+        height: 100%;
+        height: 800px;
+        bottom: 0px;        
     }
-    .epikiaea .asean img{
-        width: 225px;
-        height: 225px;
+    .epikasean .asean img{
+        height: 175px;
+        width: 175px;
     }
-    
-    .epikiaea .asean .img{
+    .epikasean .asean .img{
         position: relative;
         display: block;
-        top: 0%;
         border-radius: 50%;
-        margin-top: -5%;
-        left: 77%;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-        
-    }
-    @keyframes slideinright {
-        from{
-            opacity: 0;
-            left: 150%;
-        }to{
-            opacity: 1;
-            left: 83%;
-        }
-    }
-    .epikiaea .asean .h1{
-        display: block;
-        position: relative;
-        top: 100px;
-        color: #88d2f8f9;
-        font-size: 90px;
-        left: 51%;
-        font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slideinright1 {
-        from{
-            opacity: 0;
-            left: 150%;
-        }to{
-            opacity: 1;
-            left: 63%;
-        }
+        top: 30px;
+        left: 80%;
+        transform: translate(0);
+    
     }
     
+    .epikasean .asean .h1{
+        display: block;
+        position: absolute;
+        left: 65%;
+        top: 85px;
+        color: #88d2f8f9;
+        font-size: 60px;
+        font-family: "Roboto Condensed", sans-serif;
+        transform: translate(0);
+    
+    }
     .infoasean{
-        position: inherit;
-        top: 0;
+        position: relative;
         width: 100%;
     }
     .infoasean img {
         width: 400px;
-        height: 500px;
+        height: 450px;
+        
     }
+    
     .infoasean .prabowo{
-        top: 0;
+        top: 40px;
         display: block;
         position: relative;
-        top: -100%;
+        left: 80px;
         transform: translate(0);
-        left: 30px;
-        overflow: hidden;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 70%;
+
     }
-    @keyframes slideinright4 {
-        from{
-            left: -100%;
-        }to{
-            left: 30px;
-        }
-    }
+    
     
     
     .infoasean .quote2{
-        height: 0;
-        top: 0;
+        transform: translate(0);
         display: block;
         position: absolute;
-        width: 58%;
-        left: 40%;
-        font-size: 30px;
-        font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
+        width: 61%;
+        top: 10%;
+        left: 35%;
+        font-size: 28px;
     }
-    @keyframes slideinright3 {
-        from{
-            left: 150%;
-        }to{
-            left: 40%;
-        }
-    }
-    
     
     .infoasean .infoaseann{
-        position: inherit;
-        top: -300%;
+        position: relative;
         display: block;
-        width: 50%;
-        height: 100%;
-        left: 45%;
-        bottom: 190px;
-        font-size: 25px;
-        font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 12s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 50%;
+        width: 58%;
+        height:auto;
+        left: 40%;
+        bottom: 350px;
+        font-size: 23px;
+        transform: translate(0);
     }
-    
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
-    }
-    
   }
-  
-  /* For medium devices */
-  
-  @media screen and (min-width: 1300px){
-    .epikiaea .asean img{
+
+  @media screen and (min-width: 1500px){
+    .epikasean{
+        position: relative;
+        height: 900px;
+        width: 100%;
+        bottom: 0;
+        
+    }
+    .epikasean img {
         width: 225px;
         height: 225px;
     }
-    
-    .epikiaea .asean .img{
+    .epikasean .asean .img{
         position: relative;
         display: block;
         border-radius: 50%;
-        margin-top: -5%;
-        left: 83%;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+        top: 30px;
+        left: 80%;
+    
     }
-    @keyframes slideinright {
-        from{
-            opacity: 0;
-            left: 150%;
-        }to{
-            opacity: 1;
-            left: 83%;
-        }
-    }
-    .epikiaea .asean .h1{
+    
+    .epikasean .asean .h1{
         display: block;
-        position: relative;
-        top: 100px;
+        position: absolute;
+        left: 60%;
+        top: 85px;
         color: #88d2f8f9;
         font-size: 90px;
-        left: 63%;
         font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slideinright1 {
-        from{
-            opacity: 0;
-            left: 150%;
-        }to{
-            opacity: 1;
-            left: 63%;
-        }
+
+    
     }
     .infoasean{
         position: relative;
@@ -1172,99 +1135,61 @@ section{
     }
     .infoasean img {
         width: 500px;
-        height: 500px;
+        height: 600px;
     }
+    
     .infoasean .prabowo{
+        top: 0;
         display: block;
         position: relative;
-        top: 20% ;
         left: 30px;
         overflow: hidden;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 70%;
     }
-    @keyframes slideinright4 {
-        from{
-            left: -100%;
-        }to{
-            left: 30px;
-        }
-    }
+    
     
     
     .infoasean .quote2{
+    
         display: block;
         position: absolute;
-        width: 58%;
+        width: 61%;
         top: 10%;
-        left: 40%;
-        font-size: 30px;
+        left: 38%;
+        font-size: 35px;
+        text-align: left;
         font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
     }
-    @keyframes slideinright3 {
-        from{
-            left: 150%;
-        }to{
-            left: 40%;
-        }
-    }
-    
     
     .infoasean .infoaseann{
         position: relative;
         display: block;
         width: 60%;
-        height: 100%;
-        left: 40%;
-        bottom: 150px;
+        height:auto;
+        left: 35%;
+        bottom: 425px;
         font-size: 25px;
         font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 12s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 50%;
-    }
-    
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
+        text-align: right;
     }
   }
-.epikiaea .copous img{
-    width: 225px;
-    height: 200px;
+
+  .epikcopous{
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
-.epikiaea .copous .img{
+.epikcopous .copous img{
+    width: 225px;
+    height: 225px;
+}
+.epikcopous .copous .img{
     position: relative;
     display: block;
     border-radius: 50%;
-    top: -65px;
+    top: 30px;
     left: 50px;
-    animation-name:dissapear;
-    animation-duration: 1s;
+    animation-name: dissapear;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:1;
     animation-direction: normal;
@@ -1272,26 +1197,19 @@ section{
     animation-timeline: view();
     animation-range: entry cover 40%;
     opacity: 0;
+
 }
-@keyframes slidein1 {
-    from{
-        left: -100%;
-        opacity: 0;
-    }to{
-        left: 50px;
-        opacity: 1;
-    }
-}
-.epikiaea .copous .h1{
+
+.epikcopous .copous .h1{
     display: block;
-    position: relative;
+    position: absolute;
     left: 300px;
     top: 85px;
     color: #88d2f8f9;
     font-size: 90px;
     font-family: "Roboto Condensed", sans-serif;
     animation-name: dissapear;
-    animation-duration: 1s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:1;
     animation-direction: normal;
@@ -1299,90 +1217,24 @@ section{
     animation-timeline: view();
     animation-range: entry cover 40%;
     opacity: 0;
-}
-@keyframes slidein {
-    from{
-        left: -50%;
-        opacity: 0;
-    }to{
-        left: 300px;
-        opacity: 1;
-    }
-}
 
+}
 .infocopous{
     position: relative;
+    margin-top: 50px;
     width: 100%;
 }
 .infocopous img {
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
 }
 
 .infocopous .gustav{
+
     display: block;
     position: relative;
-    margin-top: -5%;
     left: 70%;
     overflow: hidden;
-    animation-name: dissapear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry cover 60%;
-}
-@keyframes slidein4 {
-    from{
-        left: 150%;
-    }to{
-        left: 70%;
-    }
-}
-
-
-.infocopous .quote{
-    display: block;
-    position: absolute;
-    width: 61%;
-    top: 15%;
-    left: 30px;
-    font-size: 30px;
-    text-align: right;
-    font-family: "Kanit", sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 1px;
-    animation-name: dissapear;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count:1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry cover 40%;
-}
-@keyframes slidein3 {
-    from{
-        opacity: 0;
-        left: -50%;
-    }to{
-        opacity: 1;
-        left: 30px;
-
-    }
-}
-
-.infocopous .infoicopousn{
-    position: relative;
-    display: block;
-    width: 65%;
-    height: 100%;
-    left: 30px;
-    bottom: 160px;
-    font-size: 25px;
-    font-family: "Work Sans", sans-serif;
     animation-name: dissapear;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
@@ -1394,40 +1246,70 @@ section{
     opacity: 0;
 }
 
-@keyframes dissapear {
-    from{
-        opacity: 0;
-    }to{
-        opacity: 1;
-    }
+.infocopous .quote{
+
+    display: block;
+    position: absolute;
+    width: 61%;
+    top: 10%;
+    left: 50px;
+    font-size: 35px;
+    text-align: right;
+    font-family: "Kanit", sans-serif;
+    animation-name: dissapear;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    opacity: 0;
+}
+
+.infocopous .infocopousn{
+    position: relative;
+    display: block;
+    width: 65%;
+    height:auto;
+    bottom: 190px;
+    left: 30px;
+    font-size: 30px;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    animation-name: dissapear;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    opacity: 0;
 }
 @media screen and (max-width: 550px) {
-    .copous{
-        position: relative;
-        top: 740px;
+    .epikcopous{
+        height: 100%;
+        bottom: 200px;
     }
-    .epikiaea .copous img{
+    .epikcopous .copous img{
         height: 125px;
         width: 125px;
     }
-    .epikiaea .copous .img{
+    .epikcopous .copous .img{
         position: relative;
         display: block;
         border-radius: 50%;
         top: 30px;
         left: 30px;
     }
-    .epikiaea .copous .h1{
+    .epikcopous .copous .h1{
         display: block;
         position: absolute;
         left: 180px;
         top: 55px;
         color: #88d2f8f9;
         font-size: 60px;
-    }
-    .infocopous{
-        position: relative;
-        top: 880px;
     }
     .infocopous{
         height: 100%;
@@ -1442,50 +1324,48 @@ section{
         display: block;
         position: relative;
         left:50%;
-        top: -90px;
-        transform: translate(-50%,0%);
+        bottom: 20px;
+        transform: translate(-50%,0);
         overflow: hidden;
     }
     .infocopous .quote{
         display: block;
-        position: absolute;
+        position: relative;
         width: 80%;
-        margin-top: 10px;
-        top: 265px;
         left: 30px;
-        font-size: 25px;
+        font-size: 20px;
         text-align: right;
         font-family: "Kanit", sans-serif;
         letter-spacing: 1px;
         word-spacing: 1px;
     }
-    .infocopous .infoicopousn{
+    .infocopous .infocopousn{
         position: relative;
         display: block;
         width: 80%;
+        margin-top: 200px;
         height: 100%;
         left: 30px;
-        top: 270px;
-        font-size:20px;
+        font-size:18px;
+        text-align: left;
     }
   }
-@media screen and (min-width: 550px) {
-    .copous{
-        position: relative;
-        top: 660px;
+  @media screen and (min-width: 550px) {
+    .epikcopous{
+        bottom: 200px;
     }
-    .epikiaea .copous img{
+    .epikcopous .copous img{
         height: 125px;
         width: 125px;
     }
-    .epikiaea .copous .img{
+    .epikcopous .copous .img{
         position: relative;
         display: block;
         border-radius: 50%;
         top: 30px;
         left: 30px;
     }
-    .epikiaea .copous .h1{
+    .epikcopous .copous .h1{
         display: block;
         position: absolute;
         left: 180px;
@@ -1494,370 +1374,273 @@ section{
         font-size: 60px;
     }
     .infocopous{
-        position: relative;
-        top: 800px;
-    }
-    .infocopous{
         height: 100%;
         position: relative;
         width: 100%;
     }
     .infocopous img {
-        width: 300px;
-        height: 350px;
+        width: 350px;
+        height: 400px;
     }
     .infocopous .gustav{
         display: block;
         position: relative;
         left:50%;
-        top: -90px;
-        transform: translate(-50%,0%);
+        bottom: 20px;
+        transform: translate(-50%,0);
         overflow: hidden;
     }
     .infocopous .quote{
         display: block;
-        position: absolute;
+        position: relative;
         width: 80%;
-        margin-top: 10px;
-        top: 47%;
-        left: 30px;
+        left: 50%;
+        transform: translate(-50%,0);
         font-size: 25px;
         text-align: right;
         font-family: "Kanit", sans-serif;
         letter-spacing: 1px;
         word-spacing: 1px;
     }
-    .infocopous .infoicopousn{
+    .infocopous .infocopousn{
         position: relative;
         display: block;
         width: 80%;
+        margin-top: 242px;
         height: 100%;
-        left: 30px;
-        top: 170px;
-        font-size:20px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size:21px;
+        text-align: left;
     }
   }
-  @media screen and (min-width: 950px) {
-    .copous{
-        position: none;
-        top: 0px;
+  @media screen and (min-width: 1050px) {
+    .epikcopous{
+        height: 750px;
+        bottom: 0;
     }
-    .epikiaea .copous img{
-        height: 225px;
-        width: 225px;
+    .epikcopous .copous img{
+        height: 175px;
+        width: 175px;
     }
-    .epikiaea .copous .img{
+    .epikcopous .copous .img{
         position: relative;
         display: block;
         border-radius: 50%;
         top: 30px;
         left: 50px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+    
     }
-    @keyframes slidein1 {
-        from{
-            left: -100%;
-            opacity: 0;
-        }to{
-            left: 50px;
-            opacity: 1;
-        }
-    }
-    .epikiaea .copous .h1{
+
+    
+    .epikcopous .copous .h1{
         display: block;
         position: absolute;
-        left: 300px;
+        left: 250px;
         top: 85px;
         color: #88d2f8f9;
-        font-size: 90px;
+        font-size: 70px;
         font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slidein {
-        from{
-            left: -50%;
-            opacity: 0;
-        }to{
-            left: 300px;
-            opacity: 1;
-        }
-    }
     
+    }
     .infocopous{
-        height: 100%;
         position: relative;
         width: 100%;
-        top: 0px;
     }
     .infocopous img {
-        width: 400px;
-        height: 500px;
+        width: 350px;
+        height: 400px;
     }
     
     .infocopous .gustav{
+    
         display: block;
         position: relative;
-        top: 10px;
-        left: 70%;
-        margin-top: 0;
+        left: 80%;
+        transform: translate(-50%,0);
         overflow: hidden;
+    }
+    
+    
+    .infocopous .quote{
+    
+        display: block;
+        position: absolute;
+        width: 61%;
+        left: 10px;
+        top: 20px;
         transform: translate(0,0);
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 60%;
-    }
-    @keyframes slidein4 {
-        from{
-            left: 150%;
-        }to{
-            left: 70%;
-        }
-    }
-    
-    
-    .infocopous .quote{
-        display: block;
-        position: absolute;
-        width: 61%;
-        margin-top: 0px;
-        left: 30px;
-        top: 60px;
-        left: 30px;
-        font-size: 30px;
+        font-size: 25px;
         text-align: right;
         font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-    }
-    @keyframes slidein3 {
-        from{
-            opacity: 0;
-            left: -50%;
-        }to{
-            opacity: 1;
-            left: 30px;
-    
-        }
     }
     
-    .infocopous .infoicopousn{
-        top: auto;
+    .infocopous .infocopousn{
         position: relative;
         display: block;
-        width: 65%;
-        height: 100%;
-        left: 30px;
-        bottom: 180px;
-        font-size: 25px;
+        width: 60%;
+        height:auto;
+        left: 20px;
+        bottom: 420px;
+        transform: translate(0,0);
+        font-size: 20px;
         font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
+        text-align: left;
     }
   }
-  
-  /* For medium devices */
-  
-  @media screen and (min-width: 1300px){
-    .epikiaea .copous img{
-        width: 225px;
-        height: 200px;
+  @media screen and (min-width: 1250px) {
+    .epikcopous{
+        height: 750px;
+        bottom: 0;
     }
-    .epikiaea .copous .img{
+    .epikcopous .copous img{
+        height: 175px;
+        width: 175px;
+    }
+    .epikcopous .copous .img{
         position: relative;
         display: block;
         border-radius: 50%;
-        top: -65px;
+        top: 30px;
         left: 50px;
-        animation-name:dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+    
     }
-    @keyframes slidein1 {
-        from{
-            left: -100%;
-            opacity: 0;
-        }to{
-            left: 50px;
-            opacity: 1;
-        }
-    }
-    .epikiaea .copous .h1{
+
+    
+    .epikcopous .copous .h1{
         display: block;
-        position: relative;
-        left: 300px;
+        position: absolute;
+        left: 250px;
         top: 85px;
         color: #88d2f8f9;
-        font-size: 90px;
+        font-size: 70px;
         font-family: "Roboto Condensed", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
-    }
-    @keyframes slidein {
-        from{
-            left: -50%;
-            opacity: 0;
-        }to{
-            left: 300px;
-            opacity: 1;
-        }
-    }
     
+    }
     .infocopous{
         position: relative;
         width: 100%;
     }
     .infocopous img {
         width: 400px;
-        height: 500px;
+        height: 450px;
     }
     
     .infocopous .gustav{
+    
         display: block;
         position: relative;
-        margin-top: -5%;
-        left: 70%;
+        left: 80%;
+        transform: translate(-50%,0);
         overflow: hidden;
-        animation-name: dissapear;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 60%;
-    }
-    @keyframes slidein4 {
-        from{
-            left: 150%;
-        }to{
-            left: 70%;
-        }
     }
     
     
     .infocopous .quote{
+    
         display: block;
         position: absolute;
         width: 61%;
-        top: 15%;
+        left: 10px;
+        top: 20px;
+        transform: translate(0,0);
+        font-size: 28px;
+        text-align: right;
+        font-family: "Kanit", sans-serif;
+    }
+    
+    .infocopous .infocopousn{
+        position: relative;
+        display: block;
+        width: 60%;
+        height:auto;
         left: 30px;
+        bottom: 430px;
+        transform: translate(0,0);
+        font-size: 23px;
+        font-family: "Work Sans", sans-serif;
+        text-align: left;
+    }
+  }
+  @media screen and (min-width: 1500px){
+    .epikcopous{
+        height: 850px;
+    }
+    .epikiaea .copous img{
+        height: 200px;
+        width: 200px;
+    }
+    .epikcopous .copous .img{
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        top: 30px;
+        left: 50px;
+    
+    }
+    
+    .epikcopous .copous .h1{
+        display: block;
+        position: absolute;
+        left: 300px;
+        top: 85px;
+        color: #88d2f8f9;
+        font-size: 90px;
+        font-family: "Roboto Condensed", sans-serif;
+    
+    }
+    .infocopous{
+        position: relative;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .infocopous img {
+        width: 450px;
+        height: 500px;
+    }
+    
+    .infocopous .gustav{
+    
+        display: block;
+        position: relative;
+        left: 70%;
+        transform: translate(0%,0);
+        overflow: hidden;
+    }
+    
+    
+    .infocopous .quote{
+    
+        display: block;
+        position: absolute;
+        width: 61%;
+        top: 5%;
+        left: 50px;
         font-size: 30px;
         text-align: right;
         font-family: "Kanit", sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-    }
-    @keyframes slidein3 {
-        from{
-            opacity: 0;
-            left: -50%;
-        }to{
-            opacity: 1;
-            left: 30px;
-    
-        }
     }
     
-    .infocopous .infoicopousn{
+    .infocopous .infocopousn{
         position: relative;
         display: block;
-        width: 65%;
-        height: 100%;
+        width: 60%;
+        height:auto;
         left: 30px;
-        bottom: 160px;
+        bottom: 450px;
         font-size: 25px;
         font-family: "Work Sans", sans-serif;
-        animation-name: dissapear;
-        animation-duration: 10s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count:1;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-timeline: view();
-        animation-range: entry cover 40%;
-        opacity: 0;
+        text-align: left;
     }
-    
-    @keyframes dissapear {
-        from{
-            opacity: 0;
-        }to{
-            opacity: 1;
-        }
-    }
-  }
+
+}
 .topics{
     text-align: center;
     justify-content: center;
     font-size: 40px;
     display: block;
     width: 100%;
-    height: cover;
+    height: auto;
     margin-bottom: 150px;
 }
 .color{
@@ -1933,7 +1716,6 @@ section{
 @media screen and (max-width: 550px){
     .topics{
         position: relative;
-        top: 1250px;
     }
     .color{
         color: #88d2f8f9;
@@ -2010,7 +1792,7 @@ section{
 @media screen and (min-width: 550px){
     .topics{
         position: relative;
-        top: 1150px;
+        bottom: 100px;
     }
     .color{
         color: #88d2f8f9;
@@ -2032,7 +1814,7 @@ section{
 @media screen and (min-width: 950px){
     .topics{
         position: relative;
-        top: 0;
+        bottom: 200px;
     }
     .color{
         color: #88d2f8f9;
@@ -2051,10 +1833,15 @@ section{
         opacity: 0;
     }
 }
+@media screen and (min-width: 1050px){
+    .topics{
+        bottom: 0;
+    }
+}
 @media screen and (min-width: 1300px){
     .topics{
-         position: relative;
-        top: 0;
+        position: relative;
+        bottom: 0;
     }
     .color{
         color: #88d2f8f9;

@@ -122,16 +122,10 @@ h3{
     font-size: 16px;
     padding: 7px;
 }
-@media (max-width: 1320px){
-    footer {
-        font-size: 14px;
-        top: 0;
-      }
-}
+
 @media (max-width: 1120px) {
     footer {
       font-size: 14px;
-      top: 0;
     }
     .footer-content-left{
         display: inline-block;
@@ -153,36 +147,52 @@ h3{
       margin-left: 100px;
     }
   }
-  @media (max-width:950px) {
-        footer {
-          font-size: 14px;
-          top: 1000px;
-        }
-        .footer-content-left,
-        .footer-content-center,
-        .footer-content-right {
-          display: block;
-          width: 100%;
-          margin-bottom: 80px;
-          text-align: left;
-          justify-content: left;
-          margin-left: 0;
-          margin-right: 0px;
-          font-size: 18px;
-        }
-        .footer-content-center h3,
-        .footer-content-center ul{
-            text-align: center;
-        }
-        .footer .footer-content-center i {
-          margin-left: 0;
-        }
-      
+  @media (max-width: 732px) {
+    footer {
+      font-size: 14px;
+      bottom: 200px;
+      height: 630px;
+    }
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 80px;
+      text-align: left;
+      justify-content: left;
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 18px;
+    }
+    .footer-content-center h3,
+    .footer-content-center ul{
+        text-align: center;
+    }
+    .footer .footer-content-center i {
+      margin-left: 0;
+    }
   }
-@media (max-width: 532px) {
+  @media (max-width: 550px) {
     footer {
         font-size: 14px;
-        top: 1100px;
+        bottom: 150px;
+        height: 700px;
+      }
+      .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+        height: 10px;
+    }
+    
+  }
+  @media (max-width: 532px) {
+    footer {
+        font-size: 14px;
+        bottom: 100px;
+        height: 550px;
       }
       .footer-content-left{
         display: block;

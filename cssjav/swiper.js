@@ -83,7 +83,7 @@ let swiperCards = new Swiper(".card__content", {
   });
 
   let swiperCards3 = new Swiper(".card__content3", {
-    slidesPerView: 'auto',
+    slidesPerView: '2',
     loop: true,
     spaceBetween: 32,
     grabCursor: true,
@@ -100,11 +100,14 @@ let swiperCards = new Swiper(".card__content", {
     },
   
     breakpoints:{
+      300: {
+        slidesPerView: 1,
+      },
       600: {
         slidesPerView: 2,
       },
       968: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
     },
   });
@@ -154,6 +157,43 @@ let swiperCards = new Swiper(".card__content", {
     navigation: {
       nextEl: ".swiper-button-next5",
       prevEl: ".swiper-button-prev5",
+    },
+  
+    breakpoints:{
+      300: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      968: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {}
+    }
+  }
+
+  let swiperCards7 = new Swiper(".card__content7", {
+    slidesPerView: '2',
+    loop: true,
+    spaceBetween: 32,
+    grabCursor: true,
+  
+  
+    pagination: {
+      el: '.swiper-pagination7',
+    },
+  
+  
+    navigation: {
+      nextEl: ".swiper-button-next7",
+      prevEl: ".swiper-button-prev7",
     },
   
     breakpoints:{
